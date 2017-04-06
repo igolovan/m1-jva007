@@ -12,6 +12,7 @@ public class T1_Sort
         System.out.println();
 
         sortAsc(numbers);
+        System.out.println(Arrays.toString(numbers));
 
         int[] arrToCheck = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         System.out.println("Is numbers sorted: " + String.valueOf(Arrays.equals(arrToCheck, numbers)).toUpperCase());
@@ -24,7 +25,14 @@ public class T1_Sort
      */
     public static void sortAsc(int[] data)
     {
-        // TODO YOUR CODE HERE
+        for (int i = 0; i < data.length-1 ; i++) {
+
+            if (data[i] > data[i+1]) {
+
+                    swap(data, i, i+1);
+                    sortAsc(data);
+            }
+        }
     }
 
 
@@ -35,6 +43,8 @@ public class T1_Sort
      */
     public static void swap(int[] data, int idx1, int idx2)
     {
-        // TODO SHOULD BE ALREADY IMPLEMENTED
+        int a = data[idx1];
+        data[idx1] = data[idx2];
+        data[idx2] = a;
     }
 }

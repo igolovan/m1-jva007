@@ -7,12 +7,14 @@ public class T4_TanksMoveRandom extends JPanel
 {
     int tankX = 0;
     int tankY = 0;
+    long l = System.currentTimeMillis();
 
     void runTheGame()
     {
         while (true)
         {
             randomMove();
+
         }
     }
 
